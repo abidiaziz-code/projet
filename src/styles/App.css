@@ -1,0 +1,446 @@
+/* Styles pour les formulaires d'authentification */
+
+/* Conteneurs */
+.login-form-container,
+.register-form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-card,
+.register-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Titres */
+.login-title,
+.register-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.login-subtitle,
+.register-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Formulaires */
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.password-label-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgot-password-link {
+  font-size: 14px;
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.forgot-password-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Inputs */
+.form-input {
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.2s;
+  background: #f8f9fa;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-input.input-error {
+  border-color: #e74c3c;
+}
+
+.form-input.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.form-input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Messages d'erreur */
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Checkbox */
+.checkbox-group {
+  margin-top: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+}
+
+.checkbox-input {
+  margin-right: 10px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.checkbox-text {
+  line-height: 1.5;
+}
+
+.terms-link {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+/* Boutons */
+.login-button,
+.register-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.login-button:hover:not(:disabled),
+.register-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.login-button:disabled,
+.register-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Liens de navigation */
+.login-link-container,
+.register-link-container {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.login-text,
+.register-text {
+  color: #666;
+  margin-right: 5px;
+}
+
+.login-link,
+.register-link {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-link:hover,
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* Séparateur */
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.separator-text {
+  padding: 0 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Boutons sociaux */
+.social-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-button {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.social-button:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.google-button {
+  color: #4285F4;
+}
+
+.github-button {
+  color: #333;
+}
+
+/* Force du mot de passe */
+.password-strength {
+  margin-top: 10px;
+}
+
+.strength-bar {
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.strength-fill {
+  height: 100%;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+.strength-text {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Exigences du mot de passe */
+.password-requirements {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.password-requirements h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.password-requirements ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.password-requirements li {
+  font-size: 13px;
+  margin-bottom: 5px;
+  list-style-type: none;
+  position: relative;
+}
+
+.password-requirements li::before {
+  content: '✓';
+  position: absolute;
+  left: -20px;
+  font-size: 12px;
+}
+
+.password-requirements li.met {
+  color: #27ae60;
+}
+
+.password-requirements li.unmet {
+  color: #999;
+}
+
+.password-requirements li.unmet::before {
+  content: '✗';
+  color: #e74c3c;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 15px;
+  color: #666;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Page non autorisée */
+.unauthorized-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 20px;
+}
+
+.unauthorized-content {
+  text-align: center;
+  max-width: 500px;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.unauthorized-title {
+  font-size: 28px;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.unauthorized-message {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.unauthorized-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.back-button,
+.dashboard-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.back-button {
+  background: white;
+  border: 2px solid #e0e0e0;
+  color: #333;
+}
+
+.back-button:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.dashboard-button {
+  background: #667eea;
+  border: none;
+  color: white;
+}
+
+.dashboard-button:hover {
+  background: #764ba2;
+  transform: translateY(-2px);
+}
+
+/* Alertes */
+.alert {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.alert-danger {
+  background: #ffe6e6;
+  border: 1px solid #ffcccc;
+  color: #e74c3c;
+}
